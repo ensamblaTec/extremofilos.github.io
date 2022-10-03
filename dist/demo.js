@@ -14,7 +14,6 @@ const mouse = new THREE.Vector2();
 const intersectionPoint = new THREE.Vector3();
 const planeNormal = new THREE.Vector3();
 const plane = new THREE.Plane();
-const canvas = document.querySelector
 //ferr 
 var ferr;
 // deinos
@@ -38,6 +37,7 @@ function init() {
     camera.position.z = 70;
 
     rendered = new THREE.WebGLRenderer({
+        
         antialias: true
     });
     rendered.setSize(window.innerWidth, window.innerHeight);
