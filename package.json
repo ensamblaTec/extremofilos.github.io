@@ -1,0 +1,23 @@
+{
+  "name": "extremofilos.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-code99/extremofilos.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-code99/extremofilos.github.io/issues"
+  },
+  "homepage": "https://github.com/g-code99/extremofilos.github.io#readme",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
