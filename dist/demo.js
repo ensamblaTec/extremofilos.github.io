@@ -22,7 +22,7 @@ var deinos;
 function init() {
     scene = new THREE.Scene();
     var background = new THREE.TextureLoader();
-    background.load('/dist/media/background.jpg', (texture) => {
+    background.load('media/background.jpg', (texture) => {
         scene.background = texture;
     });
 
@@ -53,7 +53,7 @@ function init() {
 
     // mars
     var mars_geometry = new THREE.SphereGeometry(5, 50, 50);
-    var texture = new THREE.TextureLoader().load('/dist/models/diffuse-mars2k.png');
+    var texture = new THREE.TextureLoader().load('models/diffuse-mars2k.png');
 
     var material = new THREE.MeshBasicMaterial({
         map: texture
@@ -68,7 +68,7 @@ function init() {
     ////////////////////////////////////////////////////////////
     // CARDS
     // FERROACID
-    var texture = new THREE.TextureLoader().load('/dist/models/cards/Ferroacido.png');
+    var texture = new THREE.TextureLoader().load('models/cards/Ferroacido.png');
     var material = new THREE.MeshBasicMaterial({map:texture});
     // 
     // geometria
@@ -83,7 +83,7 @@ function init() {
 
     // const interaction = new Interaction(rendered, scene, camera);
      // RADIODEINO-300
-     var texture1 = new THREE.TextureLoader().load('/dist/models/cards/Deinococus.png');
+     var texture1 = new THREE.TextureLoader().load('models/cards/Deinococus.png');
      var material1 = new THREE.MeshBasicMaterial({map:texture1});
      // 
      // geometria
@@ -112,7 +112,7 @@ function init() {
 
     // test card svg
     // var loader = new SVGLoader();
-    // loader.load('/dist/models/cards/cartaPrueba.svg', function (data) {
+    // loader.load('models/cards/cartaPrueba.svg', function (data) {
     //     const paths = data.paths;
 	// 	const group = new THREE.Group();
 
@@ -174,7 +174,7 @@ function animate() {
 // planets
 //kepler planet
 var loader = new GLTFLoader();
-    loader.load('/dist/models/kepler-452b.glb', (gltf) => {
+    loader.load('models/kepler-452b.glb', (gltf) => {
         kepler = gltf.scene;
         kepler.scale.set(0.04,0.04,0.04);
         kepler.position.x = 155;
@@ -185,7 +185,7 @@ var loader = new GLTFLoader();
 });
 // earth planet
 var loader = new GLTFLoader();
-loader.load('/dist/models/earth_clouds.glb', (gltf) => {
+loader.load('models/earth_clouds.glb', (gltf) => {
         earth_clouds = gltf.scene;
         earth_clouds.scale.set(0.01,0.01,0.01);
         earth_clouds.position.y = 6;
@@ -196,7 +196,7 @@ loader.load('/dist/models/earth_clouds.glb', (gltf) => {
 });
 // sun
 var loader = new GLTFLoader();
-loader.load('/dist/models/sun.glb', (gltf) => {
+loader.load('models/sun.glb', (gltf) => {
     sun = gltf.scene;
     sun .scale.set(0.02,0.02,0.02);
     sun.position.y = 6;
@@ -205,7 +205,7 @@ loader.load('/dist/models/sun.glb', (gltf) => {
     scene.add(sun);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/55_Cancri_e_1_24364.glb', (gltf) => {
+loader.load('models/55_Cancri_e_1_24364.glb', (gltf) => {
     crancri_55 = gltf.scene;
     crancri_55.scale.set(0.1,0.1,0.1);
     crancri_55.position.y = 6;
@@ -214,14 +214,14 @@ loader.load('/dist/models/55_Cancri_e_1_24364.glb', (gltf) => {
     scene.add(crancri_55);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Hubble.glb', (gltf) => {
+loader.load('models/Hubble.glb', (gltf) => {
     hubble = gltf.scene;
     hubble.position.y = 6;
     hubble.position.x = 65;
     scene.add(hubble);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/SPITZER.glb', (gltf) => {
+loader.load('models/SPITZER.glb', (gltf) => {
     spitzer = gltf.scene;
     spitzer.position.y = 6;
     spitzer.position.x = 300;
@@ -229,7 +229,7 @@ loader.load('/dist/models/SPITZER.glb', (gltf) => {
     scene.add(spitzer);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/proxima_b.glb', (gltf) => {
+loader.load('models/proxima_b.glb', (gltf) => {
     proxima_b = gltf.scene;
     proxima_b.position.y = 6;
     proxima_b.position.x = -245;
@@ -239,7 +239,7 @@ loader.load('/dist/models/proxima_b.glb', (gltf) => {
 });
 // Legend Ferroacid
 var loader = new GLTFLoader();
-loader.load('/dist/models/Vesta_1_100.glb', (gltf) => {
+loader.load('models/Vesta_1_100.glb', (gltf) => {
     vesta = gltf.scene;
     vesta.scale.set(0.005,0.003,0.003);
     vesta.position.y = 6;
@@ -247,7 +247,7 @@ loader.load('/dist/models/Vesta_1_100.glb', (gltf) => {
     scene.add(vesta);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Vesta_1_100.glb', (gltf) => {
+loader.load('models/Vesta_1_100.glb', (gltf) => {
     var vesta = gltf.scene;
     vesta.scale.set(0.002,0.002,0.002);
     vesta.position.y = 20;
@@ -255,7 +255,7 @@ loader.load('/dist/models/Vesta_1_100.glb', (gltf) => {
     scene.add(vesta);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Triton_1_2707.glb', (gltf) => {
+loader.load('models/Triton_1_2707.glb', (gltf) => {
     triton = gltf.scene;
     triton.scale.set(0.1,0.1,0.1);
     triton.position.y = 6;
@@ -264,7 +264,7 @@ loader.load('/dist/models/Triton_1_2707.glb', (gltf) => {
     scene.add(triton);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/TitanSurface_1_5150.glb', (gltf) => {
+loader.load('models/TitanSurface_1_5150.glb', (gltf) => {
     titan_1 = gltf.scene;
     titan_1.scale.set(0.01,0.01,0.01);
     titan_1.position.y = 6;
@@ -273,7 +273,7 @@ loader.load('/dist/models/TitanSurface_1_5150.glb', (gltf) => {
     scene.add(titan_1);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Titan_1_5150.glb', (gltf) => {
+loader.load('models/Titan_1_5150.glb', (gltf) => {
     titan_1 = gltf.scene;
     titan_1.scale.set(0.01,0.01,0.01);
     titan_1.position.y = 6;
@@ -281,7 +281,7 @@ loader.load('/dist/models/Titan_1_5150.glb', (gltf) => {
     scene.add(titan_1);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Rhea_1_1529.glb', (gltf) => {
+loader.load('models/Rhea_1_1529.glb', (gltf) => {
     titan_19 = gltf.scene;
     titan_19.scale.set(0.1,0.1,0.1);
     titan_19.position.y = 6;
@@ -290,7 +290,7 @@ loader.load('/dist/models/Rhea_1_1529.glb', (gltf) => {
     scene.add(titan_19);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Osiris_Rex.glb', (gltf) => {
+loader.load('models/Osiris_Rex.glb', (gltf) => {
     osiris_rex = gltf.scene;
     osiris_rex.scale.set(1,1,1);
     osiris_rex.position.y = 6;
@@ -299,7 +299,7 @@ loader.load('/dist/models/Osiris_Rex.glb', (gltf) => {
     scene.add(osiris_rex);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Odyssey.glb', (gltf) => {
+loader.load('models/Odyssey.glb', (gltf) => {
     odyssey = gltf.scene;
     odyssey.scale.set(1,1,1);
     odyssey.position.y = 6;
@@ -308,7 +308,7 @@ loader.load('/dist/models/Odyssey.glb', (gltf) => {
     scene.add(odyssey);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Europa_1_3138.glb', (gltf) => {
+loader.load('models/Europa_1_3138.glb', (gltf) => {
     europa = gltf.scene;
     europa.scale.set(0.01,0.01,0.01);
     europa.position.y = 6;
@@ -316,7 +316,7 @@ loader.load('/dist/models/Europa_1_3138.glb', (gltf) => {
     scene.add(europa);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Ganymede_1_5268.glb', (gltf) => {
+loader.load('models/Ganymede_1_5268.glb', (gltf) => {
     ganymede = gltf.scene;
     ganymede.scale.set(0.01,0.01,0.01);
     ganymede.position.y = 6;
@@ -324,7 +324,7 @@ loader.load('/dist/models/Ganymede_1_5268.glb', (gltf) => {
     scene.add(ganymede);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Ceres_1_1000.glb', (gltf) => {
+loader.load('models/Ceres_1_1000.glb', (gltf) => {
     ceres = gltf.scene;
     ceres.scale.set(0.01,0.01,0.01);
     ceres.position.y = 6;
@@ -333,7 +333,7 @@ loader.load('/dist/models/Ceres_1_1000.glb', (gltf) => {
     scene.add(ceres);
 });
 var loader = new GLTFLoader();
-loader.load('/dist/models/Jupiter_1_142984.glb', (gltf) => {
+loader.load('models/Jupiter_1_142984.glb', (gltf) => {
     jupiter = gltf.scene;
     jupiter.scale.set(0.013,0.013,0.013);
     jupiter.position.y = 6;
@@ -343,7 +343,7 @@ loader.load('/dist/models/Jupiter_1_142984.glb', (gltf) => {
 });
 // huevo
 // var loader = new GLTFLoader();
-// loader.load('/dist/models/WASP-12b_1_249888.glb', (gltf) => {
+// loader.load('models/WASP-12b_1_249888.glb', (gltf) => {
 //     wasp_12b = gltf.scene;
 //     wasp_12b.position.y = -15;
 //     scene.add(wasp_12b);
