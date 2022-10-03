@@ -9,11 +9,7 @@ var scene, camera, rendered;
 var kepler,earth_clouds,mars,sun,wasp_12b,crancri_55,hubble;
 var spitzer,proxima_b,vesta,triton,titan_1,titan_19,osiris_rex;
 var odyssey, europa, ganymede, ceres, jupiter;
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
-const intersectionPoint = new THREE.Vector3();
-const planeNormal = new THREE.Vector3();
-const plane = new THREE.Plane();
+
 //ferr 
 var ferr;
 // deinos
@@ -351,13 +347,13 @@ loader.load('models/Jupiter_1_142984.glb', (gltf) => {
 
 init();
 
-window.addEventListener('mousemove', function(e) {
-    mouse.x = (e.clientX / this.window.innerWidth) * 2 -1;
-    mouse.y = -(e.clientY / this.window.innerHeight) * 2 -1;
-    planeNormal.copy(camera.position).normalize();
-    plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position);
-    raycaster.setFromCamera(mouse, camera);
-    raycaster.ray.intersectPlane(plane, intersectionPoint);
+const raycaster = new THREE.Raycaster();
+const clickmouse = new THREE.Vector2();
+const moveMouse = new THREE.Vector2();
+
+window.addEventListener('click', (event) => {
+    console.log('event');
+    console.log(event);
 });
 
 /*
